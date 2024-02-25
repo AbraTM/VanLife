@@ -1,0 +1,64 @@
+.about{
+    color: rgba(22, 22, 22, 1);
+}
+
+.about-body{
+    background-color: rgba(255, 247, 237, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img-top{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about-main-txt{
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.about-txt-p1, .about-txt-p2{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    padding-bottom: 20px;
+}
+
+.about-main-txt, 
+.about-txt-p1, .about-txt-p2{
+    width: 500px;
+}
+
+.explore-van{
+    background-color: rgba(255, 204, 141, 1);
+    width: 500px;
+    padding: 40px 60px;
+    border-radius: 5px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.explore-van-txt{
+    font-weight: 700;
+    font-size: 24px
+}
+
+.explore-van-btn{
+    height: 50px;
+    width: 180px;
+    border: none;
+    outline: none;
+    background-color: rgba(22, 22, 22, 1);
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 30px;
+}

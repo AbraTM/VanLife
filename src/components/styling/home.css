@@ -1,0 +1,52 @@
+.home-body{
+    background-image: url(./../../../public/Home-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 525px;
+}
+
+@media (min-width: 830px){
+    .home-body{
+        background-color: rgba(37, 37, 37, 0.937);
+        background-size: auto;
+        background-position: center top 20%;
+    }
+}
+
+.home-main-txt{
+    color: rgba(255, 255, 255, 1);
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 42px;
+    min-width: 500px;
+    max-width: 510px;
+}
+
+.home-txt{
+    color: rgba(255, 255, 255, 1);
+    font-size: 500;
+    font-size: 15px;
+    line-height: 24px;
+    min-width: 500px;
+    max-width: 510px;
+    margin-top: 20px;
+}
+
+.findvan-btn-cn{
+    margin-top: 50px;
+}
+
+.findvan{
+    height: 50px;
+    width: 500px;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 140, 56, 1);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
