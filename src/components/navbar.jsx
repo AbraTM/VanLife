@@ -8,7 +8,7 @@ export default function NavBar(){
             <Link to = "/" className="nav-left">#VANLIFE</Link>
             <div className="nav-right">
                 <Link to = "/about">About</Link>
-                <Link>Vans</Link>
+                <Link to = "/Vans">Vans</Link>
             </div>
         </nav>
     )

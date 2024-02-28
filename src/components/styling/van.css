@@ -1,0 +1,41 @@
+.van-card{
+    height: 500px;
+    width: 300px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.van-card img{
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.van-card-btm{
+    display: flex;
+    justify-content: space-between;
+}
+
+.van-name{
+    text-decoration: none;
+    color: rgba(22, 22, 22, 1);
+}
+
+.van-tag{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85px;
+    height: 35px;
+    border-radius: 5px;
+    color: rgba(255, 234, 208, 1);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.van-card-btm-right div:nth-child(2){
+    font-weight: 500;
+    font-size: 14px;
+}

@@ -1,0 +1,11 @@
+.back-btn {
+    text-decoration: none;
+    display: flex;
+    gap: 15px;
+}
+
+.back-btn-txt{
+    text-decoration: underline;
+    text-underline-position: below;
+    text-underline-offset: 3px;
+}
