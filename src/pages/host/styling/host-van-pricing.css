@@ -1,0 +1,14 @@
+.host-van-price{
+    margin-left: 20px;
+    margin-top: 30px;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.host-van-price span{
+    position: relative;
+    top: -2px;
+    margin-left: 2px;
+    font-weight: 400;
+    font-size: 16px;
+}

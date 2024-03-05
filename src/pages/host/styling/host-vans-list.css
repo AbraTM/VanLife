@@ -1,0 +1,44 @@
+.host-van-link{
+    text-decoration: none;
+    color: #161616;
+}
+
+.host-vans-list{
+    background-color: #FFF7ED;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+h1{
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+.host-van{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 500px;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.host-van-img{
+    height: 80px;
+    border-radius: 6px;
+}
+
+.host-van-name{
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.host-van-price{
+    font-weight: 450;
+    font-size: 16px;
+}

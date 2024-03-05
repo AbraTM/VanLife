@@ -15,8 +15,14 @@ nav{
 
 .nav-right {
     display: flex;
-    gap: 20px;
-    
+    gap: 30px; 
+}
+
+.nav-right a:hover{
+    font-weight: 700;
+    transform: scale(1.2);
+    text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .nav-right a{
@@ -24,4 +30,13 @@ nav{
     font-size: 16px;
     text-decoration: none;
     color: rgba(0, 0, 0, 1);
+    transition: ease-out;
+}
+
+.my-link{
+    font-weight: 700;
+    transform: scale(1.2);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    color: red;
 }

@@ -2,10 +2,67 @@
     text-decoration: none;
     display: flex;
     gap: 15px;
+    padding: 50px;
+    background-color: rgba(255, 247, 237, 1);
+    color: rgba(32, 31, 29, 1); 
 }
 
 .back-btn-txt{
     text-decoration: underline;
     text-underline-position: below;
     text-underline-offset: 3px;
+}
+
+.van{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    background-color: rgba(255, 247, 237, 1);
+}
+
+.van-img{
+    width: 550px;
+    height: 550px;
+    border-radius: 5px;
+}
+
+.van-name{
+    font-size: 32px;
+    font-weight: 700;
+    color: rgba(22, 22, 22, 1);
+    margin: 20px 0px;
+}
+
+.van-price{
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.van-price span{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.van-description{
+    font-weight: 500;
+    font-size: 16px;
+    max-width: 550px;
+    margin-bottom: 35px;
+}
+
+.rent-van-btn{
+    border: none;
+    outline: none;
+    background-color: rgba(255, 140, 56, 1);
+    height: 50px;
+    width: 550px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 50px;
 }

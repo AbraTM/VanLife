@@ -12,7 +12,7 @@ export default function Van(props){
             </Link>
             <div className="van-card-btm">
                 <div className="van-card-btm-left">
-                    <Link to = {`/Vans/${props.id}`} className="van-name"> 
+                    <Link to = {`/Vans/${props.id}`} className="van-card-name"> 
                         <div>{props.name}</div>
                     </Link>
                     <div className="van-tag" style={{backgroundColor : props.type === "simple" ? "rgba(225, 118, 84, 1)" : 

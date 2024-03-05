@@ -1,9 +1,7 @@
 import React from "react";
 import "./styling/vanspage.css";
-import NavBar from "../components/navbar";
 import SearchFilter from "../components/search-filter";
 import Van from "../components/van";
-import Footer from "../components/footer";
 
 export default function VansPage(){
 
@@ -24,14 +22,12 @@ export default function VansPage(){
 
     return (
         <div className="vans-page">
-            <NavBar />
             <SearchFilter />
             <div className="vans-grid-cn">
                 <div className="vans-grid">
                     {vanElements}
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

@@ -1,13 +1,9 @@
 import React from "react";
 import "./styling/about.css";
-import NavBar from "../components/navbar";
-import Footer from "../components/footer";
 
 export default function About(){
     return (
       <div className="about">
-        <NavBar />
-
         <div className="about-body">
           <img src="./About-top.png" className="about-img-top"></img>
           <div className="about-main-txt">
@@ -28,7 +24,6 @@ export default function About(){
             <button className="explore-van-btn">Explore our vans</button>
           </div>
         </div>
-        <Footer />
       </div>
     )
   }

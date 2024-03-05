@@ -1,0 +1,17 @@
+.host-van-details{
+    margin-left: 20px;
+    margin-top: 30px;
+    color: rgba(22, 22, 22, 1);
+}
+
+.host-van-details-txt{
+    max-width: 450px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 7px;
+}
+
+.host-van-details-txt span{
+    font-weight: 700;
+}
