@@ -1,0 +1,32 @@
+.nf-container{
+    background-color: rgba(255, 247, 237, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 170px 0px;
+}
+
+.notfound{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+}
+
+.nf-txt{
+    font-size: 40px;
+    font-weight: 700;
+
+}
+
+.nf-return-btn{
+    width: 600px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(22, 22, 22, 1);
+    border: none;
+    border-radius: 5px;
+}

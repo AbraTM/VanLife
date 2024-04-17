@@ -1,17 +1,17 @@
 import React from "react";
-import { Link, NavLink, useParams, Outlet } from "react-router-dom";
+import { Link, NavLink, useParams, Outlet, useLoaderData } from "react-router-dom";
 import "./styling/host-van.css"
+import { getHostVanData } from "../api";
+import { requireAuth } from "../util";
+
+export async function loader( { params } ){
+    await requireAuth()
+    return getHostVanData(params.id)
+}
 
 export default function HostVan(){
-
-    const hostVanID = useParams().id
-    const [hostVan, setHostVan] = React.useState([])
-    
-    React.useEffect(() => {
-        fetch(`/api/host/vans/${hostVanID}`)
-            .then(res => res.json())
-            .then(data => setHostVan(data.vans[0]))
-    }, [hostVanID])
+    const hostVanData = useLoaderData()
+    const hostVan = hostVanData[0]
 
     const activeStyles = {
         textDecoration: "underline",
@@ -19,10 +19,9 @@ export default function HostVan(){
         textUnderlineOffset: "5px",
         fontWeight: "700"
     }
-
     return(
         <div className="host-van-page">
-            <Link className="host-back-btn" to = "/host/vans"> 
+            <Link className="host-back-btn" to = ".." relative="path"> 
                 <div>&#8592;</div>
                 <div className="host-back-btn-txt">Back to all vans</div>
             </Link>
@@ -38,11 +37,11 @@ export default function HostVan(){
                     </div>
                     <div>
                         <div className="host-sub-nav">
-                            <NavLink to = "" end style = {({isActive}) => isActive ? activeStyles : null}>Details</NavLink>
+                            <NavLink to = "." end style = {({isActive}) => isActive ? activeStyles : null}>Details</NavLink>
                             <NavLink to = "pricing" style = {({isActive}) => isActive ? activeStyles : null}>Pricing</NavLink>
                             <NavLink to = "photos" style = {({isActive}) => isActive ? activeStyles : null}>Photos</NavLink>
                         </div>
-                        <Outlet />
+                        <Outlet context={hostVanData}/>
                     </div>
                 </div>
             </div>

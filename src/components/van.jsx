@@ -1,18 +1,19 @@
 import React from "react";
 import "./styling/van.css"
-import { Link } from "react-router-dom";
+import { Link, useSearchParams} from "react-router-dom";
 
 export default function Van(props){
+    const [searchParams, setSearchParams] = useSearchParams()
 
-
+    const typeFilter = searchParams.get("type")
     return(
         <div className="van-card">
-            <Link to = {`/Vans/${props.id}`}> 
+            <Link to = {props.id} state={ {search: searchParams.toString(), type: typeFilter} }> 
                 <img src={`${props.URL}`}></img>
             </Link>
             <div className="van-card-btm">
                 <div className="van-card-btm-left">
-                    <Link to = {`/Vans/${props.id}`} className="van-card-name"> 
+                    <Link to = {props.id} className="van-card-name"> 
                         <div>{props.name}</div>
                     </Link>
                     <div className="van-tag" style={{backgroundColor : props.type === "simple" ? "rgba(225, 118, 84, 1)" : 

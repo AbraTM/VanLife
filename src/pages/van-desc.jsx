@@ -1,22 +1,22 @@
 import React from "react";
 import "./styling/van-desc.css"
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useLoaderData } from "react-router-dom";
+import { getVanData } from "./api";
+
+export function loader( { params }){
+    return getVanData(params.id)
+}
 
 export default function VanDesc(){
-    const [vanData, setVanData] = React.useState([])
-    const vanID = useParams().id
+    const vanData = useLoaderData()
+    const Location = useLocation()
+    const search = Location.state.search
     
-    React.useEffect(() => {
-        fetch(`/api/vans/${vanID}`)
-            .then(res => res.json())
-            .then(data => setVanData(data.vans))
-    }, [vanID])
-
     return (
         <div >
-            <Link className="back-btn" to = "/Vans"> 
+            <Link className="back-btn" to = { search ? `..?${search}` : ".." } relative="path"> 
                 <div>&#8592;</div>
-                <div className="back-btn-txt">Back to all vans</div>
+                <div className="back-btn-txt">{Location.state.type ? `Back to all ${Location.state.type} vans` : "Back to all vans"}</div>
             </Link>
             <div className="van">
                 <img src = {vanData.imageUrl} className="van-img"></img>

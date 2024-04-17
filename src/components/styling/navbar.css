@@ -16,6 +16,8 @@ nav{
 .nav-right {
     display: flex;
     gap: 30px; 
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-right a:hover{
@@ -31,6 +33,16 @@ nav{
     text-decoration: none;
     color: rgba(0, 0, 0, 1);
     transition: ease-out;
+}
+
+.nav-right a:nth-child(4){
+    transform: scale(1);
+}
+
+.login img{
+    height: 24px;
+    width: 24px;
+    margin-top: 4px;
 }
 
 .my-link{
