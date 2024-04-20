@@ -1,17 +1,16 @@
 import React from "react";
-import { Link, NavLink, useParams, Outlet, useLoaderData } from "react-router-dom";
+import { Link, NavLink, Outlet, useLoaderData } from "react-router-dom";
 import "./styling/host-van.css"
 import { getHostVanData } from "../api";
 import { requireAuth } from "../util";
 
-export async function loader( { params } ){
-    await requireAuth()
+export async function loader( { params, request } ){
+    await requireAuth(request)
     return getHostVanData(params.id)
 }
 
 export default function HostVan(){
-    const hostVanData = useLoaderData()
-    const hostVan = hostVanData[0]
+    const hostVan = useLoaderData()
 
     const activeStyles = {
         textDecoration: "underline",
@@ -19,6 +18,7 @@ export default function HostVan(){
         textUnderlineOffset: "5px",
         fontWeight: "700"
     }
+    console.log(hostVan)
     return(
         <div className="host-van-page">
             <Link className="host-back-btn" to = ".." relative="path"> 
@@ -41,7 +41,7 @@ export default function HostVan(){
                             <NavLink to = "pricing" style = {({isActive}) => isActive ? activeStyles : null}>Pricing</NavLink>
                             <NavLink to = "photos" style = {({isActive}) => isActive ? activeStyles : null}>Photos</NavLink>
                         </div>
-                        <Outlet context={hostVanData}/>
+                        <Outlet context={[hostVan]}/>
                     </div>
                 </div>
             </div>

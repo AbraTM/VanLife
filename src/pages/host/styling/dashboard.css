@@ -1,0 +1,74 @@
+.dashboard-income{
+    width: 100%;
+    background-color: rgba(255, 234, 208, 1);
+    font-family: Inter;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px 40px 30px;
+}
+
+.dashboard-income h1{
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.dashboard-income-txt{
+    color: rgba(77, 77, 77, 1);
+    font-size: 16px;
+    font-weight: 450;
+    display: flex;
+    justify-content: space-between;
+}
+
+.black{
+    color: rgba(22, 22, 22, 1);
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.dashboard-income-txt u{
+    font-weight: 600;
+    text-underline-offset: 1.9px;    
+}
+
+.income-amount{
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.dashboard-score{
+    background-color: rgba(255, 221, 178, 1);
+    font-size: 24px;
+    font-weight: 700;
+    color: rgba(22, 22, 22, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+}
+
+.score-data{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.dashboard-score span{
+    color: rgba(77, 77, 77, 1);
+    font-weight: 500;
+}
+
+.star{
+    color: orange;
+}
+
+.viewall{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(22, 22, 22, 1);
+    padding-top: 10px;
+}

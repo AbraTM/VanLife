@@ -4,8 +4,8 @@ import { Link, useLoaderData } from "react-router-dom";
 import { getHostVanData } from "../api";
 import { requireAuth } from "../util";
 
-export async function loader(){
-    await requireAuth()
+export async function loader({ request }){
+    await requireAuth(request)
     return getHostVanData()
 }
 
@@ -29,12 +29,9 @@ export default function HostVanList(){
     return(
         <div className="host-vans-list">
             <h1>Your Listed Vans</h1>
-            { hostVans.length > 0 ? 
-                    <section>
-                        {hostVanElements}
-                    </section>
-            : <h1>Loading...</h1>}
-            
+                <section>
+                    {hostVanElements}
+                </section>
         </div>
     )
 }
