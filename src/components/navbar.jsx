@@ -1,7 +1,8 @@
 import React from "react";
 import "./styling/navbar.css"
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import imageUrl from "../../public/avatar-icon.png"
+import logOutIcon from "../../public/logout.png"
 
 export default function NavBar(){
     const activeStyles = {
@@ -10,6 +11,15 @@ export default function NavBar(){
         textDecoration : "underline",
         textUnderlineOffset : "4px",
     }
+
+    const navigate = useNavigate()
+
+    function logOut() {
+        localStorage.removeItem("loggedin")
+        navigate("/")
+        alert("Logged Out")
+    }
+
     return(
         <nav>
             <Link to = "/" className="nav-left">#VANLIFE</Link>
@@ -20,6 +30,9 @@ export default function NavBar(){
                 <NavLink to = "login" className = "login">
                     <img src = {imageUrl} />
                 </NavLink>
+                <button onClick={logOut} className="logout-btn">
+                    <img src = {logOutIcon}></img>
+                </button>
             </div>
         </nav>
     )

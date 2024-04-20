@@ -18,7 +18,6 @@ export default function HostVan(){
         textUnderlineOffset: "5px",
         fontWeight: "700"
     }
-    console.log(hostVan)
     return(
         <div className="host-van-page">
             <Link className="host-back-btn" to = ".." relative="path"> 

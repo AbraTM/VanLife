@@ -32,7 +32,7 @@ nav{
     font-size: 16px;
     text-decoration: none;
     color: rgba(0, 0, 0, 1);
-    transition: ease-out;
+    transition: 100ms ease-in;
 }
 
 .nav-right a:nth-child(4){
@@ -51,4 +51,18 @@ nav{
     text-decoration: underline;
     text-underline-offset: 4px;
     color: red;
+}
+
+.logout-btn{
+    border: none;
+    background: none;
+    padding: none;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.logout-btn img{
+    width: 20px;
 }

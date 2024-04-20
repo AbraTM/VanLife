@@ -1,7 +1,21 @@
 import React from "react";
+import { useOutletContext } from "react-router-dom";
 
 export default function HostVanPhotos(){
+    const vanData = useOutletContext()
+    const vanImgURL = vanData[0].imageUrl
     return (
-        <h1 style={{marginLeft : "20px", marginTop: "30px"}}>HostVanPhotos</h1>
+        <div style = {{
+            padding: 20,
+            marginTop: 10
+        }}>
+            <img 
+                src = {vanImgURL}
+                style = {{
+                    width: 110,
+                    borderRadius: 6,
+                }}
+            ></img>
+        </div>
     )
 }

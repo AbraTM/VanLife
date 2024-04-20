@@ -1,5 +1,6 @@
 import React from "react";
 import "./styling/about.css";
+import { Link } from "react-router-dom";
 
 export default function About(){
     return (
@@ -21,7 +22,9 @@ export default function About(){
               <div>Your destination is waiting.</div>
               <div>Your van is ready.</div>
             </div>
-            <button className="explore-van-btn">Explore our vans</button>
+            <Link to = "/vans">
+              <button className="explore-van-btn">Explore our vans</button>
+            </Link>
           </div>
         </div>
       </div>

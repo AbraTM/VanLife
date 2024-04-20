@@ -5,7 +5,9 @@ import { Outlet, NavLink } from "react-router-dom";
 export default function HostLayout(){
     const activeStyles ={
         textDecoration : "underline",
-        color : "#4D4D4D"
+        color : "#4D4D4D",
+        fontWeight: 700,
+        textUnderlineOffset: 2
     }
     return (
         <div>

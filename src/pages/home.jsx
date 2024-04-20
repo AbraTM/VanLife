@@ -1,5 +1,6 @@
 import React from "react";
 import "./styling/home.css";
+import { Link } from "react-router-dom"
 
 export default function Home(){
     return(
@@ -9,7 +10,9 @@ export default function Home(){
                 <div className="home-txt">Add adventure to your life by joining the #vanlife movement. Rent the perfect van to make your perfect road trip.</div>
 
                 <div className="findvan-btn-cn">
-                    <button className="findvan">Find your van</button>
+                    <Link to = "/vans">
+                        <button className="findvan">Find your van</button>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -19,6 +19,7 @@ export async function action({ request }){
         return response
     }
     catch(err){
+        alert("Can't login ? \nTry email: b@b.com and password: p123 😉")
         return err
     }
 }

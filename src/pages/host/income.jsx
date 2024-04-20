@@ -18,9 +18,9 @@ export default function Income(){
         }
     ]
 
-    const transactionElements = transactions.map(data => {
+    const transactionElements = transactions.map((data,index) => {
         return (
-            <div className="transaction-list-item">
+            <div className="transaction-list-item" key = {index}>
                 <div className="transaction-list-item-amount">${data.amount}</div>
                 <div className="transaction-list-item-date">{data.date}</div>
             </div>
