@@ -22,7 +22,7 @@ export default function NavBar(){
 
     return(
         <nav>
-            <Link to = "/" className="nav-left">#VANLIFE</Link>
+            <Link to = "/" className="nav-left">#VANTURE</Link>
             <div className="nav-right">
                 <NavLink to = "host" style = {({isActive}) => isActive ? activeStyles : null }>Host</NavLink>
                 <NavLink to = "about" style = {({isActive}) => isActive ? activeStyles : null }>About</NavLink>
